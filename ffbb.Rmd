@@ -1,0 +1,19 @@
+---
+title: "Assignment week 3"
+author: "Mansi Gupta"
+date: "29 August 2018"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+## Plot 
+```{r plot,message=FALSE}
+library(ggplot2)
+library(plotly)
+plot_ly(x=mtcars$wt,y=mtcars$mpg,mode="markers",color=as.factor(mtcars$cyl)) %>%
+layout(title="mpg vs wt graph")
+```
